@@ -1,6 +1,14 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-export default clerkMiddleware();
+/*
+You can protect routes based on a user's authentication status by checking if the user is signed in.
+Use auth.protect() if you want to redirect unauthenticated users to the sign-in route automatically.
+*/
+const isProtectedRoute = createRouteMatcher(['/generate-program', '/profile'])
+
+export default clerkMiddleware(async (auth, req) => {
+  if (isProtectedRoute(req)) await auth.protect()
+});
 
 export const config = {
   matcher: [
