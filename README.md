@@ -4,14 +4,29 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-```bash
+1. Clone the repository
+2. Install dependencies:
+
+```shell
+npm install
+```
+
+3. Set up your environment variables as shown above
+4. Run the development server:
+
+```shell
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Deployment
+
+This application can be easily deployed to Vercel:
+
+```shell
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
