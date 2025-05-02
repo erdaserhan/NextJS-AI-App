@@ -20,6 +20,7 @@ export const syncUser = mutation({
   },
 });
 
+// To update the user in https.ts
 export const updateUser = mutation({
   args: {
     name: v.string(),

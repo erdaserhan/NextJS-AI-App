@@ -193,6 +193,7 @@ const ProfilePage = () => {
                                 className="flex items-center gap-2 text-sm text-muted-foreground"
                               >
                                 <span className="text-xs text-primary font-mono">
+                                  {/* Adds zero(0) at the beginning */}
                                   {String(foodIndex + 1).padStart(2, "0")}
                                 </span>
                                 {food}
